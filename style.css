@@ -1,271 +1,270 @@
-
-
-
-/* NORMALIZACION: */
-*{
-    padding: 0;
+/* Estilos Base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a; /* Fondo oscuro */
+    color: #fff; /* Color de texto blanco */
     margin: 0;
-    box-sizing: border-box; /*Esto mantiene el ancho y alto a pesar de padding y border */
-    font-family: 'Times New Roman', Times, serif;
-    list-style: none; /*Quita los puntos de las listas*/
-    text-decoration: none; /*Esto quita el subrayado de los enlaces*/
-    color: white;
+    padding: 0;
 }
 
-body{
-    background-color: black; /*To-Do: borrar cuando este el fondo final*/
+.header {
+    background-color: #000; /* Negro sólido */
+    color: #f9a800; /* Color de texto anaranjado */
+    padding: 20px;
+    text-align: center;
+    position: relative;
 }
 
-header{
-    position: fixed; /*Hace que el header se quede fijo en la parte superior*/
-    right: 0;
-    top: 0;
-    z-index: 100; /*Esto hace que el header se muestre por encima*/
-    width: 100%;
-    display: flex; /*Esto hace que los elementos de pongan en linea*/
-    align-items: center; /*Centra verticalmente*/
-    justify-content: space-between; /*Los elementos se separen*/
-    padding: 15px 3%;
-    background-color: transparent;
+.logo {
+    height: 50px; /* Ajusta la altura según sea necesario */
+    position: absolute;
+    top: 20px; /* Ajusta la posición vertical según sea necesario */
+    left: 20px; /* Ajusta la posición horizontal según sea necesario */
+    border-radius: 5px; /* Estilo opcional */
 }
 
-.logo{
-    font-size: 30px;
-    font-weight: 800; /*Este es el grueso de las letras*/
+
+.nav {
+    position: absolute;
+    top: 10px;
+    right: 20px;
 }
 
-.navlist{
-    display: flex; /*Esto sirve para que los elementos de la lista se pongan en linea*/
-}
-
-.navlist a{
-    margin-left: 60px; /*Para separar las palabras*/
-    font-size: 15px;
-    font-weight: 600;
-    border-bottom: 2px solid transparent; /*Esun subrayado transparente*/
-    transition: all .5s ease; /*Esto es para animar tpdas las caracteristicas del .nalist a */
-}
-
-.navlist a:hover{
-    border-bottom: 2px solid white; /*Subrayado blanco que aparece cuando estamos encima con el mouse*/ 
-}
-
-#menu-icon{
-    display: none; /*lo pongo en none para que se vea solo cuando la pagina este colapsada*/
-}
-
-#menu-icon{
-    font-size: 35px;
-    z-index: 101; /*para que este sobre el header*/
-    cursor: pointer; /*para que aparezca la mano*/
-}
-
-#menu-toggle{
-    display: none; /*nunca quiero que se vea el checkbox*/
-}
-
-.menu-icon-action{
-    display: none; /*para que no se le pueda hacer click*/
-}
-
-.hero{
-    height: 100%;
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%); /*fondo de color gradual*/
-    position: relative; /* para que sea relativo al contenedor (nos permite usar top, bottom, left y right)*/
-    display: grid; /* para que el hero se pueda dividir en dos columnas*/
-    grid-template-columns: 1fr 1fr; /*las 2 columnas*/
-    align-items: center;/* para alinear verticalmente el hero*/
-    gap: 2rem; /*haya espacio de 2 rem entre las dos columnas*/
-}
-
-section{
-    padding: 0 8%;
-}
-
-.hero-text h5{
-    font-size: 14px;
-    font-weight: 400;
-    margin-bottom: 25px;
-}
-
-.hero-text h1{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 50px;
-    line-height: 1;
-    margin: 0 0 30px;
-}
-
-.hero-text h4{
-    font-size: 18px;
-    font-weight: 600;
-    margin-top: 10px;
-}
-
-.hero-text p{
-    font-size: 80%;
-    margin-bottom: 40px;
-    line-height: 1.9;
-}
-
-.hero-img img{
-    width: 400px;
-    margin: 10% 0 0 10%;
-    height: auto;
-    transition: all 5s linear; /*hace que la transicio  sea lineal*/
-}
-
-.hero-img img:hover{
-    width: 450px;
-    opacity: 0.6;
-}
-
-.hero-text a{
-    display: inline-block;
-    background-color: #4d4d4d;
-    border: 1px solid transparent;
-    padding: 15px 30px;
-    line-height: 1.4;
-    font-size: 14px;
-    font-weight: 500;
-    border-radius: 30px;
-    text-transform: uppercase;
-    transition: all .5s ease;
-}
-
-.hero-text a:hover{
-    background-color: transparent;
-    border: 1px solid white;
-    transform: translateX(8px);
-}
-
-.hero-text a.videos{
-    background-color: transparent;
-    border: 1px solid white;
+.nav a {
+    color: #f9a800; 
+    text-decoration: none;
     margin-left: 20px;
+    font-weight: bold;
 }
 
-.hero-text a.videos{
-    vertical-align: middle;
-    margin-right: 5px;
+.nav a:hover {
+    text-decoration: underline;
+    color: #ffcc00; 
 }
 
-.icons{
-    position: absolute;
-    top: 50vh;
-    padding: 0 3%;
-    transform: translateY(-50%);
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
 }
 
-.icons i{
-    display: block;
-    margin: 26px 0;
-    font-size: 24px;
-    transition: all .5s ease;
+.content {
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #333; /* Un gris oscuro para el contenido */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra más destacada */
 }
 
-.icons i:hover{
-    color: #4d4d4d;
-    transform: translateY(-5px);
+.content h1, .content h2 {
+    color: #f9a800; /* Anaranjado para encabezados */
 }
 
-.scroll-down{
-    position: absolute;
-    bottom: 6%;
-    right: 3%;
+.content p {
+    line-height: 1.6;
 }
 
-.scroll-down i{
-    display: block;
-    padding: 12px;
-    font-size: 25px;
-    background-color: #21383d;
-    border-radius: 30px;
-    transition: all .5s ease;
+.image-container {
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
 }
 
-.scroll-down i:hover{
-    transform: translateY(-5px);
+.image-container img {
+    max-width: 100%;
+    height: auto; /* Ajuste automático de la altura */
 }
 
-/*Aca vamos a hacer mediaquaries para que la web sea responsive*/
-@media (max-width:992px){
-    section {
-        padding: 0 3%;
-        transition:  .2s;
-    }
-
-    .hero-text{
-        padding-top: 0;
-    }
-
-    .hero-img{
-        text-align: center;
-    }
-
-    .hero-img img{
-        width: 80%;
-        margin: 10% 0 0 10%;
-    }
-
-    .hero-text p{
-        font-size: 70%;
-    }
-
-    .icons{
-        display: none;
-    }
-
-    .scroll-down{
-        display: none;
-    }
+.footer {
+    background-color: #000; /* Negro sólido */
+    color: #f9a800; /* Color de texto anaranjado */
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
 }
 
-@media (max-width: 768px){
-    .menu-icon-action{
-        display: block;
-    }
+#main-content {
+    padding: 20px;
+}
 
-    #menu-icon{
-        display: block;
-    }
+#contact-section {
+    display: none; /* Oculta la sección de contacto por defecto */
+}
 
-    .hero-text{
-        text-align: center;
-        padding-top: 100px;
-    }
+.contact-info {
+    background-color: #333; /* Un gris oscuro para el fondo */
+    color: #fff; /* Color del texto blanco */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
 
-    .hero-img img{
-        margin: 0;
-    }
+.contact-info a {
+    color: #f9a800; /* Color para enlaces */
+    text-decoration: none;
+}
 
-    .hero{
-        height: 100%;
-        gap: 1rem;
-        grid-template-columns: 1fr;
-    }
+.contact-info a:hover {
+    text-decoration: underline;
+}
 
-    .navlist{
-        position: absolute;
-        top: 100%;
-        right: -100%;
-        width: 200px;
-        height: 180px;
-        background-color: #042528b0;
+.option-header {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background-color: #444;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.option-header:hover {
+    transform: translateY(-3px);
+    background-color: #555;
+}
+
+.option-header img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+.option-header p {
+    margin: 0;
+    color: #f9a800;
+}
+
+.vending-info {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 10px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.vending-info h3,h2 {
+    color: #f9a800;
+    margin-top: 0;
+}
+
+.vending-info p strong {
+    color: #f57f20; /* Color naranja */
+}
+
+.vending-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.vending-info ul li {
+    background: url('assets/icons/check.svg') no-repeat left center;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+.vending-info p, .vending-info ul {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.vending-image-large {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.vending-image-large img {
+    max-width: 50vh;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+/* Media Query para pantallas menores a 992px */
+@media (max-width: 992px) {
+    .header {
+        background: linear-gradient(to right, #000, #333); /* Degradado de negro a gris oscuro */
+        height: 100vh; /* Ocupa toda la altura de la pantalla */
         display: flex;
         flex-direction: column;
-        align-items: center;
-        padding: 30px 20px;
-        transition: all .5s ease-out;
+        justify-content: center; /* Centra verticalmente */
+        align-items: center; /* Centra horizontalmente */
     }
 
-    .navlist a {
-        display: block;
-        margin: 7px 0;
+    .logo {
+        height: 85px; /* Aumenta la altura de la imagen */
     }
 
-    #menu-toggle:checked + label.menu-icon-action + ul{
-        right: 0;
+    .content {
+        max-width: 900px; /* Aumenta el ancho máximo del contenido */
+        padding: 30px; /* Aumenta el padding para hacer el contenido más espacioso */
+        border-radius: 10px; /* Aumenta el redondeo de las esquinas */
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); /* Sombra más pronunciada */
+    }
+
+    .image-container {
+        width: 500px; /* Aumenta el tamaño del contenedor de la imagen */
+    }
+
+    .vending-image-large img {
+        max-width: 100%; /* Cada imagen ocupará el 100% del espacio disponible */
+    }
+}
+
+/* Media Query para pantallas menores a 768px */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px;
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+
+    .logo {
+        height: 60px; /* Reduce la altura de la imagen */
+        top: 10px;
+        left: 10px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .content {
+        max-width: 100%; /* Ocupa todo el ancho disponible */
+        padding: 15px;
+        box-shadow: none; /* Elimina la sombra */
+    }
+
+    .image-container {
+        width: 100%; /* La imagen ocupa todo el ancho */
+    }
+
+    .vending-image-large img {
+        max-width: 80%; /* La imagen ocupa el 80% del ancho disponible */
+    }
+
+    .footer {
+        font-size: 12px; /* Reduce el tamaño del texto en el footer */
+        padding: 5px;
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+
+    .option-header {
+        padding: 5px; /* Reduce el padding para hacerlo más compacto */
+    }
+
+    .vending-info {
+        padding: 10px; /* Reduce el padding */
     }
 }

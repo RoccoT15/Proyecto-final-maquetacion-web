@@ -1,73 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Titulo de la web -->
-    <title>Rocco Tiberto Web</title>
-    <!-- Esta es la importacion de nuestro archivo CSS -->
+    <title>TakeNow - Innovation and Quality in Vending Machines</title>
     <link rel="stylesheet" href="style.css">
-     
-    <!-- https://boxicons.com/ -->
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-
-    <!-- https://remixicon.com/ -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"  rel="stylesheet"/>
-
-    
-
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Esta seccion es la cabecera de la pagina web la cual tendra logo y barra de navegacion -->
-    <header>
-        <!-- LOGO -->
-        <a href="#" class="logo">Rocco Tiberto</a>
-        
-        <!-- Truco para que el boton sea cliqueable sin usar JAVASCRIPT -->
-        <input type="checkbox" name="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon-action">
-            <div class='bx bx-menu' id="menu-icon"></div>
-        </label>
-        
-        <ul class="navlist">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Acerca de</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+<div class="header">
+    <img src="assets/img/takenow.jpg" alt="Logo de TakeNow" class="logo">
+    <div class="nav">
+        <a href="#" id="home-link">Home</a>
+        <a href="#" id="vendings-link">Vendings</a>
+        <a href="#" id="contact-link">Contact</a>
+    </div>
+    <h1>TakeNow</h1>
+    <p>Innovation and Quality in Vending Machines</p>
+</div>
 
-    </header>
-
-        <!-- HERO SECTION -->
-
-        <section class="hero">
-            <div class="hero-text">
-                <h5>Frontend Developer</h5>
-                <h4>ReactJS Tech Lead</h4>
-                <h1>Rocco Tiberto</h1>
-                <p>Aprende todas las tecno conmigo para obtener tu primer<br>
-                 trabajo de desarrollador web al finalizar este curso
-                </p>
-                <a href="#">CV</a>
-                <a href="#" class="videos"><i class="ri-play-fill"></i>Mira mis videos</a>
+<div id="main-content">
+    <section id="home-section">
+        <div class="hero">
+            <div class="content">
+                <h2>Benefits and Service Excellence</h2>
+                <p><strong>Quality and Variety of Products:</strong> We ensure that each machine is stocked with fresh, high-quality products. Our variety includes classic options and new trends, adapting to our consumers' preferences.</p>
+                <p><strong>Collaboration with Leading Companies:</strong> We partner with top companies to provide personalized vending services that enhance the workplace experience. Our network of machines is strategically located in factories, offices, and other high-traffic areas.</p>
+                <p><strong>Growth and Expansion:</strong> In just two years, TakeNow has experienced significant growth in the number of machines, our customer base, and revenue. This reflects our commitment to quality and customer service.</p>
+                <p><strong>Future Vision:</strong> We strive to be more than just a vending company. Our vision includes continuous expansion and innovation in our services, ensuring we always stay ahead in the market.</p>
             </div>
-
-            <div class="hero-img">
-                <img src="/assets/img/logo-lobo.png" alt="Rocco´s picture">
+            <div class="image-container">
+                <img src="assets/img/vending regular.jpg" alt="Image of vending machines">
             </div>
-        </section>
-
-        <div class="icons">
-            <a href="#"><i class="ri-instagram-line"></i></a>
-            <a href="#"><i class="ri-mail-line"></i></a>
-            <a href="#"><i class="ri-youtube-line"></i></a>
         </div>
+    </section>
 
-        <div class="scroll-down">
-            <a href="#"><i class="ri-arrow-down-s-fill"></i></a>
+    <section id="vendings-section">
+        <h2>Our Vending Options</h2>
+        <div class="vending-option">
+            <div class="option-header" onclick="toggleVendingInfo('vending1')">
+                <img src="assets/img/Vending-regular-1.jpeg" alt="Vending Option 1">
+                <p><b>Regular Vending 1</b> <i class="ri-arrow-down-s-line" id="arrow-vending1"></i></p>
+            </div>
+            <div id="vending1" class="vending-info" style="display: none;">
+                <div class="vending-image-large">
+                    <img src="assets/img/Vending-regular-1.jpeg" alt="Enlarged image of Regular Vending 1">
+                </div>
+                <h3>Model: SEAGAHY2100</h3>
+                <p>The SEAGAHY2100 machine is an advanced and versatile solution for all your vending needs. Designed with cutting-edge technology and a focus on efficiency and user experience, this machine offers smooth and reliable operation. Its sleek and modern design fits perfectly in any environment, from offices to factories and high-traffic commercial spaces.</p>
+                <p><strong>Benefits:</strong></p>
+                <ul>
+                    <li><strong>Advanced Technology:</strong> Equipped with a product detection system that guarantees correct delivery or automatic refunds.</li>
+                    <li><strong>Simplified Maintenance:</strong> The modular design makes cleaning and maintenance access easy, reducing downtime.</li>
+                    <li><strong>Diverse Payment Options:</strong> Accepts coins, bills, credit/debit cards, and mobile payments, providing flexibility to consumers.</li>
+                    <li><strong>Energy Efficiency:</strong> Low-energy cooling system and sustainable materials for eco-friendly operation.</li>
+                </ul>
+                <p><strong>Capacity:</strong></p>
+                <ul>
+                    <li><strong>Storage Capacity:</strong> Can hold up to 500 products, including snacks, beverages, and convenience items.</li>
+                    <li><strong>Dimensions:</strong> 183 cm high, 91 cm wide, and 79 cm deep.</li>
+                    <li><strong>Product Variety:</strong> Configurable spaces allow storage of a wide range of products in different sizes and shapes.</li>
+                    <li><strong>Refrigeration:</strong> Advanced cooling system keeps products at the optimal temperature, ideal for beverages and perishable snacks.</li>
+                </ul>
+            </div>
         </div>
+        
+        <div class="vending-option">
+            <div class="option-header" onclick="toggleVendingInfo('vending2')">
+                <img src="assets/img/Vending 2 Xy-Dle-10c.webp" alt="Vending Option 2">
+                <p><b>Large Vending 2</b> <i class="ri-arrow-down-s-line" id="arrow-vending2"></i></p>
+            </div>
+            <div id="vending2" class="vending-info" style="display: none;">
+                <div class="vending-image-large">
+                    <img src="assets/img/Vending 2 Xy-Dle-10c.webp" alt="Enlarged image of Large Vending 2">
+                </div>
+                <h3>Model: Dle-10c</h3>
+                <p>The DLE-10C machine is an advanced vending option designed to deliver superior performance in high-traffic environments. With a robust and elegant design, the DLE-10C stands out for its storage capacity and ease of use. Ideal for offices, factories, and shopping centers, this machine ensures continuous and efficient operation, optimizing user experience and product management.</p>
+                <p><strong>Benefits:</strong></p>
+                <ul>
+                    <li><strong>Advanced Technology and Reliability:</strong> Equipped with a sophisticated product detection system and smart controls, the DLE-10C ensures precise operations and high customer satisfaction. Its advanced management software allows real-time monitoring and automatic updates to continuously improve performance.</li>
+                    <li><strong>Storage Flexibility:</strong> Its modular design and adjustable shelves allow customizing the internal space to accommodate a wide range of products, from snacks and beverages to daily use items. This adaptability allows quick adjustment to changing market demands.</li>
+                    <li><strong>Diverse Payment Methods:</strong> Accepts various payment methods, including coins, bills, credit/debit cards, and mobile payments. This variety not only enhances accessibility for users but also minimizes purchase barriers and maximizes sales volume.</li>
+                    <li><strong>Simplified Maintenance and Energy Efficiency:</strong> Its design facilitates access for cleaning and repairs, reducing maintenance time and cost. Additionally, the low-energy cooling system and eco-friendly materials contribute to reduced operational costs and environmental impact.</li>
+                    <li><strong>Space Optimization and Performance:</strong> With its efficient storage capacity and design that maximizes space utilization, the DLE-10C not only offers high capacity but also ensures a constant product rotation, always keeping a fresh and attractive offer for consumers.</li>
+                </ul>
+                <p><strong>Capacity:</strong></p>
+                <ul>
+                    <li><strong>Storage Capacity:</strong> Offers space for up to 600 products, including a wide variety of snacks, beverages, and convenience items.</li>
+                    <li><strong>Dimensions:</strong> 190 cm in height, 95 cm in width, and 80 cm in depth.</li>
+                    <li><strong>Flexible Configuration:</strong> Allows adjusting the internal spaces to accommodate products of different sizes and shapes, maximizing the use of available space.</li>
+                    <li><strong>Efficient Refrigeration:</strong> Equipped with a high-performance cooling system to keep products at the proper temperature, ideal for perishable items and beverages.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="vending-option">
+            <div class="option-header" onclick="toggleVendingInfo('vending3')">
+                <img src="assets/img/signo +.jpg" alt="Option for other Custom Vending">
+                <p><b>Custom Vending 3</b> <i class="ri-arrow-down-s-line" id="arrow-vending3"></i></p>
+            </div>
+            <div id="vending3" class="vending-info" style="display: none;">
+                <div class="vending-image-large">
+                    <img src="assets/img/Cafetera.jpg" alt="Coffee Machine">
+                    <img src="assets/img/Ice cream.jpg" alt="Ice Cream Machine">
+                    <img src="assets/img/Popcorn.jpg" alt="Popcorn Machine">
+                </div>
+                <h2>Why Choose TakeNow?</h2>
+                <ul>
+                    <li><strong>1. Variety of Machines:</strong> We offer a wide range of vending machines for snacks, beverages, fresh products, and more. All our machines are designed with the latest technology to ensure efficient and reliable service.</li>
+                    <li><strong>2. Customization Options:</strong> We offer customization options on all our machines to meet the specific needs of our clients. From branding to product selection, we work closely with each client to create a personalized vending experience.</li>
+                    <li><strong>3. Strategic Partnerships:</strong> At TakeNow, we collaborate with leading companies to ensure our machines are located in the most strategic points, maximizing visibility and sales.</li>
+                    <li><strong>4. Maintenance and Technical Support:</strong> We offer comprehensive maintenance and technical support to ensure our machines always work optimally.</li>
+                </ul>
+                <div style="font-family: Arial, sans-serif; padding: 20px;">
+                    <h3>Capacity</h3>
+                    <ul style="list-style-type: square; margin-left: 20px;">
+                        <li><strong>Storage Capacity:</strong> Our vending machines are designed to adapt to your specific preferences and requirements. Whether you need a machine that offers a wide variety of healthy snacks, energy drinks, fresh products, or even personalized items, our machines can be configured according to your desires. You can decide the capacity and distribution of the products to optimize space and maximize sales.</li>
+                        <li><strong>Dimensions:</strong> Additionally, the dimensions of our machines are perfectly tailored to your needs, ensuring they integrate seamlessly into any available space. We take pride in offering customized solutions that meet the needs of each client.</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        
+    </section>
+
+    <section id="contact-section" class="contact-info">
+        <h2>Contact Us</h2>
+        <p>Company Phone: +1 (754) 275-0043</p>
+        <p>Email: <a href="mailto:silmenini@hotmail.com">silmenini@hotmail.com</a></p>
+        <p>Location: Pembroke Pines, Florida</p>
+        <p>Instagram: <a href="https://www.instagram.com/takenow.vending/" target="_blank">takenow.vending</a></p>
+    </section>
+    </div>
     
+    <div class="footer">
+        <p>&copy; 2024 TakeNow. All rights reserved.</p>
+    </div>
     
+
+<script>
+    // Función para mostrar una sección específica y ocultar las demás
+    function showSection(sectionId) {
+        document.getElementById('home-section').style.display = 'none';
+        document.getElementById('vendings-section').style.display = 'none';
+        document.getElementById('contact-section').style.display = 'none';
+        document.getElementById(sectionId).style.display = 'block';
+    }
+
+    // Función para mostrar/ocultar información de vending y cambiar la flecha
+    function toggleVendingInfo(vendingId) {
+        var info = document.getElementById(vendingId);
+        var arrow = document.getElementById('arrow-' + vendingId);
+
+        if (info.style.display === 'none') {
+            info.style.display = 'block';
+            arrow.classList.remove('ri-arrow-down-s-line');
+            arrow.classList.add('ri-arrow-up-s-line');
+        } else {
+            info.style.display = 'none';
+            arrow.classList.remove('ri-arrow-up-s-line');
+            arrow.classList.add('ri-arrow-down-s-line');
+        }
+    }
+
+    document.getElementById('home-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        showSection('home-section');
+    });
+
+    document.getElementById('vendings-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        showSection('vendings-section');
+    });
+
+    document.getElementById('contact-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        showSection('contact-section');
+    });
+
+    // Mostrar la sección de inicio al cargar la página
+    showSection('home-section');
+</script>
+
+
+
 </body>
 </html>
